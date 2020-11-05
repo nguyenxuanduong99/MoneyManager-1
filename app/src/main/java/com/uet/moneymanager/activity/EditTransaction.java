@@ -165,7 +165,7 @@ public class EditTransaction extends AppCompatActivity implements View.OnClickLi
                     if (transactionGroup.getType() == TransactionGroup.EXPENSE){
                         amount = -amount;
                     }
-                    returnIntent.putExtra("result", new Transaction(amount, transactionGroup, note, date));
+                    returnIntent.putExtra("result", new Transaction(id,amount, transactionGroup, note, date));
                     setResult(Activity.RESULT_OK, returnIntent);
                     finish();
                 }
